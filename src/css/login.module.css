@@ -1,0 +1,41 @@
+.logincontainer {
+  width: 100%;
+  background-color: #262626;
+}
+.loginformcontainer {
+  text-align: center;
+  width: 300px;
+  height: 400px;
+  left: 35%;
+  top: 20%;
+  position: absolute;
+  overflow: hidden;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.logininputfield {
+  padding: 0.65rem 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #edf2f7;
+  background-color: #f7fafc;
+  color: #2d3748;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+.loginformcontainer button {
+  background-color: #fc7945;
+  border: 2px solid white;
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  appearance: none;
+  margin: 20px;
+  display: inline-block;
+}

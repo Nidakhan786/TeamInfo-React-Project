@@ -1,0 +1,45 @@
+.main {
+  background: #262626;
+  height: 100vh;
+}
+.dashboardheading {
+  width: 85%;
+  height: 100px;
+  position: absolute;
+  top: 34px;
+  left: 70px;
+  text-align: center;
+  color: #fff;
+  font-size: 4em;
+  font-weight: bold;
+}
+.carousel {
+  height: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: -473px;
+}
+
+.boxes {
+  background-color: #ededed;
+  width: 25%;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  padding: auto;
+  box-shadow: 0 15px 25px rgba(252, 176, 69, 1);
+}
+
+.outerbox {
+  display: flex;
+  height: 200px;
+}
+h1 {
+  margin: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: large;
+  color: #fff;
+}
