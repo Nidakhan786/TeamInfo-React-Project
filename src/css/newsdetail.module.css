@@ -1,0 +1,26 @@
+.newsdisplay {
+  position: absolute;
+  right: 5%;
+  background: #fff;
+  width: 40%;
+  top: 35%;
+  border-radius: 10px;
+  padding: 20px;
+}
+.newsheading {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+}
+.imgicon {
+  margin-right: 10px;
+  font-size: 50px;
+}
+.newsheading h1 {
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+p {
+  text-align: center;
+}

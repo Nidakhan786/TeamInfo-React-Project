@@ -94,7 +94,7 @@
   text-align: center;
   width: 100%;
 }
-.contain .cardcontainer .content a {
+.contain .cardcontainer .content button {
   position: relative;
   display: inline-block;
   background: rgba(252, 176, 69, 1);
@@ -109,4 +109,37 @@
 .contain .cardcontainer .content p {
   color: #666;
   font-size: 0.8em;
+}
+.teamprofcardcontainer {
+  width: 418px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.teamprofcardcontainer h2 {
+  text-align: center;
+}
+
+.profileitems {
+  list-style-type: none;
+}
+.listitems {
+  width: 300px;
+  font-size: 19px;
+  box-shadow: #833ab4;
+  font-style: oblique;
+}
+.projectlist {
+  margin-left: 48px;
+}
+.close {
+  font-size: 22px;
+
+  margin: 8px;
+
+  margin-left: 95%;
 }

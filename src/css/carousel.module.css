@@ -1,5 +1,5 @@
 .news {
-  height: 300px;
+  height: 293px;
   border-radius: 10px;
   text-align: center;
   /* background: rgb(154, 209, 165); */
@@ -8,6 +8,7 @@
   background-position-y: -150px;
   background-repeat: no-repeat;
   border-radius: 10px;
+  margin-top: 50px;
 }
 .newstext {
   background-color: rgba(0, 0, 0, 0.5);

@@ -10,7 +10,9 @@ const Dashboard = () => {
       <h1 className={styles.dashboardheading}>
         Welcome to Mobile Factory Info Portal!
       </h1>
-      <div className={styles.carousel}>{/* <News /> */}</div>
+      <div className={styles.carousel}>
+        <News />
+      </div>
       <div className={styles.outerbox}>
         <div
           className={styles.boxes}

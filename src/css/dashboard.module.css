@@ -10,7 +10,7 @@
   left: 70px;
   text-align: center;
   color: #fff;
-  font-size: 4em;
+  font-size: 39px;
   font-weight: bold;
 }
 .carousel {
@@ -22,7 +22,7 @@
 }
 
 .boxes {
-  background-color: #ededed;
+  background-color: #f4cbad;
   width: 25%;
   margin: 10px;
   border-radius: 10px;
@@ -41,5 +41,5 @@ h1 {
   padding: 20px;
   text-align: center;
   font-size: large;
-  color: #fff;
+  color: #262626;
 }

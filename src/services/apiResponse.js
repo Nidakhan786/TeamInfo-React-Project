@@ -5,9 +5,7 @@ const ApiPostCall = (url, values, withjwtToken = false) => {
   //   //TODO: pass the value of header
   //  const header=  localStorage.getItem(token:'');
   // }
-  return axios.post(url, values).catch((err) => {
-    alert(err);
-  });
+  return axios.post(url, values);
 };
 const ApiGetCall = (url) => {
   axios

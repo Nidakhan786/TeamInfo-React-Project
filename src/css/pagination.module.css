@@ -1,0 +1,39 @@
+.paginationnav {
+  /* position: absolute; */
+  bottom: 0px;
+  color: #fff;
+  position: relative;
+  /* display: flex; */
+  position: fixed;
+}
+.pagination {
+  display: flex;
+  list-style-type: none;
+  cursor: pointer;
+}
+.pagination li {
+  border: solid;
+  padding: 6px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.pagination li:hover {
+  color: coral;
+}
+.pagination li:active {
+  background-color: rgb(179, 23, 49);
+  color: #fff;
+}
+.pagination li:focus {
+  color: coral;
+}
+.pagination li a:focus {
+  color: coral;
+}
+.pagination li a:active {
+  color: coral;
+}
+.pagination li a {
+  color: #fff;
+  text-decoration: none;
+}

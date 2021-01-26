@@ -1,5 +1,6 @@
 import { Carousel } from "antd";
 import { useEffect, useState } from "react";
+import "antd/lib/carousel/style/index.css";
 import styles from "../css/carousel.module.css";
 
 const CarouselComp = (prop) => {
@@ -8,9 +9,10 @@ const CarouselComp = (prop) => {
   useEffect(() => {
     setNews(newsfromprops);
   }, [newsfromprops]);
+
   return (
     <div>
-      <Carousel autoplay>
+      <Carousel autoPlay>
         {newsdata.map((news) => {
           return (
             <div className={styles.news}>

@@ -39,6 +39,10 @@ const TeamMember = () => {
               lastname={member.last_name}
               empid={member.emp_id}
               role={member.role}
+              id={member._id}
+              emailid={member.email}
+              technologies={member.technologies}
+              projects={member.projects}
             ></CardComp>
           </div>
         ))}

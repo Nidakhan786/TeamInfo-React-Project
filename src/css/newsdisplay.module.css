@@ -83,3 +83,21 @@
 .newscontain .newcardcontainer:focus {
   box-shadow: 0 15px 25px rgba(226, 113, 6, 0.945);
 }
+.inputfield {
+  padding: 0.65rem 0.5rem;
+  font-size: 14px;
+  border: 2px solid #edf2f7;
+  background-color: #f7fafc;
+  color: #2d3748;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 450px;
+  text-align: center;
+}
+.modal {
+  height: 300px;
+  opacity: 1;
+}
+.modalcontainer .ant-modal-header {
+  border-radius: 26px 26px 0 0;
+}

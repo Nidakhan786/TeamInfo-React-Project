@@ -1,0 +1,36 @@
+.inputfield {
+  padding: 0.65rem 0.5rem;
+  font-size: 14px;
+  border: 2px solid #edf2f7;
+  background-color: #f7fafc;
+  color: #2d3748;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 450px;
+  text-align: center;
+}
+.modal {
+  height: 300px;
+  opacity: 1;
+}
+.modalcontainer .ant-modal-header {
+  border-radius: 26px 26px 0 0;
+}
+:global {
+  .ant-modal-footer {
+    display: none;
+  }
+  .ant-modal-close-x {
+    display: none;
+  }
+  .ant-modal-header {
+    border-radius: 20px 20px 0 0;
+  }
+  .ant-modal-content {
+    border-radius: 20px;
+  }
+  .ant-modal.zoom-enter,
+  .ant-modal.zoom-appear {
+    opacity: 1;
+  }
+}
