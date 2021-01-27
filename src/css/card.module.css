@@ -87,8 +87,8 @@
   color: #cb7dff;
 }
 .teamprofcardcontainer {
-  width: 418px;
-  height: 300px;
+  width: 600px;
+  height: 500px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -99,6 +99,9 @@
 .teamprofcardcontainer h2 {
   text-align: center;
 }
+.teamprofcardcontainer ul {
+  list-style-type: none;
+}
 
 .profileitems {
   list-style-type: none;
@@ -108,9 +111,14 @@
   font-size: 19px;
   box-shadow: #833ab4;
   font-style: oblique;
+  margin-bottom: 20px;
 }
 .projectlist {
-  margin-left: 48px;
+  list-style-type: circle;
+  width: 600px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .close {
   font-size: 22px;
@@ -118,4 +126,7 @@
   margin: 8px;
 
   margin-left: 95%;
+}
+.projectlist li {
+  width: 200px;
 }

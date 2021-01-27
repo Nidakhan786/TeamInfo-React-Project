@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Layout, Menu, Breadcrumb } from "antd";
 import { useHistory, NavLink, BrowserRouter, Link } from "react-router-dom";
 import styles from "../css/navbar.module.css";
@@ -9,6 +9,14 @@ const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 const Navbar = () => {
   const history = useHistory();
+  const authentication = JSON.parse(localStorage.getItem("login"));
+  const [auth, setauth] = useState(false);
+  useEffect(() => {
+    if (authentication) {
+      setauth(true);
+    }
+  });
+
   const contentStyle = {
     display: "flex",
     justifyContent: "flex-end",
@@ -51,9 +59,15 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/login" className={styles.item}>
-              Sign In
-            </Link>
+            {auth ? (
+              <Link to="/login" className={styles.item}>
+                Sign Out
+              </Link>
+            ) : (
+              <Link to="/login" className={styles.item}>
+                Sign In
+              </Link>
+            )}
           </li>
           <li>
             {" "}

@@ -8,14 +8,9 @@ const NewsPosts = ({ news, loading }) => {
     newsHeading: "",
     newsDescription: "",
   });
-  if (loading) {
-    return <h2>Loading....</h2>;
-  }
+
   // } else {
-  //   setNews({
-  //     newsHeading: news[0].newsHeading,
-  //     newsDescription: news[0].newsDescription,
-  //   });
+
   // }
   return (
     <div className="newssections">

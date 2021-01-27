@@ -12,7 +12,7 @@ const CarouselComp = (prop) => {
 
   return (
     <div>
-      <Carousel autoPlay>
+      <Carousel autoplay>
         {newsdata.map((news) => {
           return (
             <div className={styles.news}>

@@ -5,15 +5,27 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import ModalForm from "./modal";
 import { useRef } from "react";
-import ProjectDetail from "./projectdetail";
+import { useHistory } from "react-router-dom";
 import ProjectInfo from "./projectmodal";
 const Project = () => {
+  const history = useHistory();
+  const authentication = JSON.parse(localStorage.getItem("login"));
   const [project, setProject] = useState([]);
   useEffect(() => {
-    const data = axios.get("http://localhost:8000/projects").then((res) => {
-      console.log(res);
-      setProject(res.data);
-    });
+    if (authentication === undefined || authentication === null) {
+      history.push("/login");
+    } else {
+      const data = axios
+        .get("http://localhost:8000/projects", {
+          headers: {
+            "x-access-token": authentication.store,
+          },
+        })
+        .then((res) => {
+          console.log(res);
+          setProject(res.data);
+        });
+    }
   }, []);
   const showModal = () => {};
   return (

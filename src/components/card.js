@@ -49,7 +49,7 @@ const CardComp = (prop) => {
                   </li>
                   <li className={styles.listitems}>
                     <b>Projects:</b>
-                    <ul className="projectlist">
+                    <ul className={styles.projectlist}>
                       {prop.projects.map((proj) => (
                         <li key={proj._id}>{proj.projectName}</li>
                       ))}

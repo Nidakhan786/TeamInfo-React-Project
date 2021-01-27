@@ -6,9 +6,10 @@ import { generateErrorToast, generateSuccessToast } from "../utils/toast/index";
 import ModalForm from "./modal";
 import Pagination from "./pagination";
 import NewsPosts from "./newsPosts";
+import { useHistory } from "react-router-dom";
 const NewsDisplay = () => {
   let modalRef = useRef();
-
+  const history = useHistory();
   const [addnews, setAddNews] = useState({
     newsHeading: "",
     newsDescription: "",
@@ -17,13 +18,25 @@ const NewsDisplay = () => {
   const [news, setNews] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
+  const authentication = JSON.parse(localStorage.getItem("login"));
+
   useEffect(() => {
     setLoading(true);
-    const data = axios.get("http://localhost:8000/news").then((res) => {
-      setNews(res.data);
-      setLoading(false);
-    });
-  }, []);
+    if (authentication === undefined || authentication === null) {
+      history.push("/login");
+    } else {
+      const data = axios
+        .get("http://localhost:8000/news", {
+          headers: {
+            "x-access-token": authentication.store,
+          },
+        })
+        .then((res) => {
+          setNews(res.data);
+          setLoading(false);
+        });
+    }
+  });
   const showModal = () => {
     modalRef.current.openModal();
   };
@@ -39,9 +52,10 @@ const NewsDisplay = () => {
     axios
       .post("http://localhost:8000/news", addnews)
       .then((res) => {
-        generateSuccessToast("Project Added Sucessfully");
+        generateSuccessToast("News Added Sucessfully");
         closeModal();
         setLoading(false);
+        setAddNews({});
       })
       .catch((err) => {
         generateErrorToast(err.message);

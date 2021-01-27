@@ -14,7 +14,7 @@
   font-weight: bold;
 }
 .carousel {
-  height: 300px;
+  height: 310px;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -28,7 +28,7 @@
   border-radius: 10px;
   text-align: center;
   padding: auto;
-  box-shadow: 0 15px 25px rgba(252, 176, 69, 1);
+  box-shadow: 0 15px 25px rgb(24, 23, 23);
 }
 
 .outerbox {
