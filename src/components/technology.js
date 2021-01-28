@@ -7,12 +7,12 @@ import { generateErrorToast, generateSuccessToast } from "../utils/toast/index";
 import { useHistory } from "react-router-dom";
 import styles from "../css/technologies.module.css";
 const Technology = () => {
-  let modalRef = useRef();
   const history = useHistory();
   const [techdisplay, settechdisplay] = useState({
     techname: "",
     usedfor: "",
   });
+  let modalRef = useRef();
   const authentication = JSON.parse(localStorage.getItem("login"));
   const [tech, setTech] = useState([]);
   useEffect(() => {
@@ -30,7 +30,7 @@ const Technology = () => {
           setTech(res.data);
         });
     }
-  });
+  }, []);
   const showModal = () => {
     modalRef.current.openModal();
   };

@@ -29,6 +29,9 @@ const Login = () => {
       setUserDetail(((userdetail.auth = true), (userdetail.store = stores)));
     }
   };
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <Formik
       initialValues={{
@@ -40,6 +43,9 @@ const Login = () => {
         setUserDetail(value);
         ApiPostCall("http://localhost:8000/auth/login", value)
           .then((response) => {
+            history.push("/dashboard");
+            refreshPage();
+
             console.log(response);
             localStorage.setItem(
               "login",
@@ -49,7 +55,7 @@ const Login = () => {
               })
             );
             storeCollectore();
-            history.push("/dashboard");
+
             setUserDetail((userdetail.auth = true));
             console.log("userdetail", userdetail);
           })

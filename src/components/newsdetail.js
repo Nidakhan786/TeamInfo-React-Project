@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../css/newsdetail.module.css";
 import { ImNewspaper } from "react-icons/im";
 const NewsDetail = (props) => {

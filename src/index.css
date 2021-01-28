@@ -243,3 +243,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #434343, #434343 1px, #111 0, #111);
 }
+body {
+  cursor: #262626;
+}

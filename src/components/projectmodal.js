@@ -11,9 +11,7 @@ const ProjectInfo = (props) => {
   const cancelModal = () => {
     modalRef.current.onCancel();
   };
-  //   const handleClick = () => {
-  //     <ProjectDetail />;
-  //   };
+
   const startdate = new Date(props.startdate).toDateString();
   const enddate = new Date(props.enddate).toDateString();
 

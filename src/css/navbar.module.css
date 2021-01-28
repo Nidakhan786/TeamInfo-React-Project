@@ -200,3 +200,28 @@ item:visited {
   list-style-type: none;
   margin-right: 10px;
 }
+.img {
+  font-size: 39px;
+  padding: 1px;
+  color: #fff;
+}
+.profdropdown {
+  height: 73px;
+  width: 128px;
+  color: #000;
+  opacity: 75%;
+  background: #fff;
+  text-decoration: none;
+  position: rig;
+  /* position: absolute; */
+  right: 13px;
+  position: absolute;
+  /* position: relative; */
+  /* z-index: 32; */
+  /* display: flex; */
+  top: 55px;
+  padding: -8px;
+  /* margin-bottom: 89px; */
+  /* width: 100%; */
+  border-radius: 10px;
+}
