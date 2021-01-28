@@ -61,6 +61,27 @@ const Technology = () => {
           Add Technology
         </button>
       </div>
+      <ModalForm ref={modalRef}>
+        <h1>Add Technology</h1>
+        <form>
+          <input
+            name="techname"
+            placeholder="Technology Name"
+            className={styles.inputfield}
+            value={techdisplay.techname}
+            onChange={onnChangeHandler}
+          />
+          <input
+            placeholder="What is it used for ?"
+            className={styles.inputfield}
+            name="usedfor"
+            value={techdisplay.usedfor}
+            onChange={onnChangeHandler}
+          ></input>
+          <button onClick={handleCancel}>Add Technology</button>
+          <button onClick={closeModal}>Cancel</button>
+        </form>
+      </ModalForm>
       <div className={styles.contain}>
         {tech.map((techs) => (
           <div className={styles.contain}>
@@ -81,27 +102,6 @@ const Technology = () => {
                     <li>{proj.projectName}</li>
                   </ul>
                 ))}
-                <ModalForm ref={modalRef}>
-                  <h1>Add Technology</h1>
-                  <form>
-                    <input
-                      name="techname"
-                      placeholder="Technology Name"
-                      className={styles.inputfield}
-                      value={techdisplay.techname}
-                      onChange={onnChangeHandler}
-                    />
-                    <input
-                      placeholder="What is it used for ?"
-                      className={styles.inputfield}
-                      name="usedfor"
-                      value={techdisplay.usedfor}
-                      onChange={onnChangeHandler}
-                    ></input>
-                    <button onClick={handleCancel}>Add Technology</button>
-                    <button onClick={closeModal}>Cancel</button>
-                  </form>
-                </ModalForm>
               </div>
             </div>
           </div>
