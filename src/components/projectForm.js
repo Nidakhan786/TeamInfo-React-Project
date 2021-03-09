@@ -3,8 +3,14 @@ import axios from "axios";
 import { Multiselect } from "multiselect-react-dropdown";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useHistory } from "react-router-dom";
 import { generateErrorToast, generateSuccessToast } from "../utils/toast/index";
+
+/**
+ *  Component containing the form to add the project
+ */
 const AddProjectForm = () => {
+  const history = useHistory();
   const [project, setProject] = useState({
     projectName: "",
     projectDescription: "",
@@ -46,6 +52,7 @@ const AddProjectForm = () => {
         setProject(res.data);
         setProject({});
         generateSuccessToast("Project Added Sucessfully");
+        history.push("/project");
       })
       .catch((err) => {
         generateErrorToast(err.message);
@@ -89,7 +96,7 @@ const AddProjectForm = () => {
           <textarea
             type="text"
             placeholder="Enter the project Name"
-            className="inputfield"
+            className="textarea"
             value={project.projectDescription}
             onChange={onnChangeHandler}
             name="projectDescription"

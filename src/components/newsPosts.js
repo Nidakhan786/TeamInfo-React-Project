@@ -8,7 +8,14 @@ const NewsPosts = ({ news, loading }) => {
     newsHeading: "",
     newsDescription: "",
   });
-
+  useEffect(() => {
+    if (news.length >= 0) {
+      setNews({
+        newsHeading: news.newsheading,
+        newsDescription: news.newsdescription,
+      });
+    }
+  }, []);
   // } else {
 
   // }

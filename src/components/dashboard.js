@@ -3,6 +3,10 @@ import { useHistory } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 import News from "./News";
 import styles from "../css/dashboard.module.css";
+
+/**
+ * Component for the Dashboard
+ */
 const Dashboard = () => {
   const history = useHistory();
   return (

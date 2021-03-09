@@ -7,6 +7,9 @@ import styles from "../css/signup.module.css";
 import TextInput from "./TextInput";
 import { formSchema } from "../helpers/validationSchema";
 import { generateSuccessToast, generateErrorToast } from "../utils/toast";
+/**
+ * Component displaying the Signup Form
+ */
 const SignupForm = () => {
   const history = useHistory();
   const initialState = {
@@ -45,6 +48,7 @@ const SignupForm = () => {
               "You've Succesfully registered Please Login to Continue"
             );
             resetForm(initialState);
+
             history.push("/login");
           })
           .catch((err) => {
@@ -85,6 +89,7 @@ const SignupForm = () => {
                 />
                 <TextInput name="emp_id" placeholder="Enter your Employee ID" />
                 <TextInput name="role" placeholder="Enter your Role" />
+
                 <button type="submit">Submit</button>
               </form>
             </div>

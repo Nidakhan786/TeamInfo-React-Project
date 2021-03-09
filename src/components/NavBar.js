@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Layout, Menu, Breadcrumb } from "antd";
-import { useHistory, NavLink, BrowserRouter, Link } from "react-router-dom";
+import { Layout, Menu } from "antd";
+import { useHistory, Link } from "react-router-dom";
 import styles from "../css/navbar.module.css";
-import Dashboard from "./dashboard";
 import { MdPermDeviceInformation } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
-
-import { Nav, NavDropdown } from "react-bootstrap";
-
+/**
+ * Component to display the Navbar at top
+ */
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 const Navbar = () => {
@@ -26,33 +25,13 @@ const Navbar = () => {
   function refreshPage() {
     window.location.reload(false);
   }
-  const contentStyle = {
-    display: "flex",
-    justifyContent: "flex-end",
-    marginTop: 0,
-    height: "610px",
-  };
   return (
     <div className={styles.header}>
       <Link to="/dashboard" className={styles.logo}>
         <MdPermDeviceInformation />
         <span className={styles.mfinfo}>MF INFO</span>
       </Link>
-      {/* <div
-        className={styles.profdropdown}
-        style={{ display: profilediv ? "block" : "none" }}
-      >
-        <ul>
-          <li>Edit profile</li>
-          <li
-            onClick={() => {
-              console.log("logout");
-            }}
-          >
-            Log out
-          </li>
-        </ul>
-      </div> */}
+
       <nav className={styles.nav}>
         <ul>
           {localStorage.getItem("login") ? (
@@ -100,7 +79,9 @@ const Navbar = () => {
                 Sign Out
               </li>
               <li>
-                <CgProfile className={styles.img} onClick={showdiv} />
+                <Link to="/profile">
+                  <CgProfile className={styles.img} onClick={showdiv} />
+                </Link>
               </li>
             </>
           ) : (

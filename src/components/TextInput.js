@@ -2,6 +2,9 @@ import React from "react";
 import { useField } from "formik";
 import styles from "../css/textInput.module.css";
 
+/**
+ * Input Field Used in forms
+ */
 const TextInput = (props) => {
   const [field, meta] = useField(props.name);
   return (

@@ -8,9 +8,7 @@ import { useHistory } from "react-router-dom";
 const CardComp = (prop) => {
   const history = useHistory();
   let modalRef = useRef();
-  const showModal = () => {
-    modalRef.current.openModal();
-  };
+  const showModal = () => {};
   const cancelModal = () => {
     modalRef.current.onCancel();
   };

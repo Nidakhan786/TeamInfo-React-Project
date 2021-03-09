@@ -7,6 +7,10 @@ import ModalForm from "./modal";
 import Pagination from "./pagination";
 import NewsPosts from "./newsPosts";
 import { useHistory } from "react-router-dom";
+
+/**
+ * Component displayed on the News page containing {NewsDetail} {NewsPosts} {Pagination} components
+ */
 const NewsDisplay = () => {
   let modalRef = useRef();
   const history = useHistory();
