@@ -3,6 +3,10 @@ import { useRef } from "react";
 import styles from "../css/project.module.css";
 import { AiOutlineClose } from "react-icons/ai";
 import ModalForm from "./modal";
+
+/**
+ * Component to show the project information
+ */
 const ProjectInfo = (props) => {
   let modalRef = useRef();
   const showModal = () => {
@@ -11,9 +15,7 @@ const ProjectInfo = (props) => {
   const cancelModal = () => {
     modalRef.current.onCancel();
   };
-  //   const handleClick = () => {
-  //     <ProjectDetail />;
-  //   };
+
   const startdate = new Date(props.startdate).toDateString();
   const enddate = new Date(props.enddate).toDateString();
 

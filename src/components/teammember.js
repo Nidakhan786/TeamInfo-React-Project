@@ -4,6 +4,9 @@ import CardComp from "./card";
 import styles from "../css/teammember.module.css";
 import { useHistory } from "react-router-dom";
 
+/**
+ * Component to display the team Members
+ */
 const TeamMember = () => {
   const history = useHistory();
   const [members, setMember] = useState([]);

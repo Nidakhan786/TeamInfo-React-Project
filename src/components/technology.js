@@ -1,18 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import ModalForm from "./modal";
-import { Player } from "@lottiefiles/react-lottie-player";
-
 import { generateErrorToast, generateSuccessToast } from "../utils/toast/index";
 import { useHistory } from "react-router-dom";
 import styles from "../css/technologies.module.css";
+/**
+ * Component displaying the technologies
+ */
 const Technology = () => {
-  let modalRef = useRef();
   const history = useHistory();
   const [techdisplay, settechdisplay] = useState({
     techname: "",
     usedfor: "",
   });
+  let modalRef = useRef();
   const authentication = JSON.parse(localStorage.getItem("login"));
   const [tech, setTech] = useState([]);
   useEffect(() => {
@@ -30,7 +31,7 @@ const Technology = () => {
           setTech(res.data);
         });
     }
-  });
+  }, [tech]);
   const showModal = () => {
     modalRef.current.openModal();
   };

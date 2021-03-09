@@ -9,7 +9,9 @@ import "antd/lib/message/style/index.css";
 import { loginSchema } from "../helpers/validationSchema";
 import TextInput from "./TextInput";
 import ApiPostCall from "../services/apiResponse";
-
+/**
+ * Component for Login Screen 
+ */
 const Login = () => {
   const initialState = {
     email: "",
@@ -29,7 +31,11 @@ const Login = () => {
       setUserDetail(((userdetail.auth = true), (userdetail.store = stores)));
     }
   };
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
+    // Formik is used for Form
     <Formik
       initialValues={{
         email: "",
@@ -40,16 +46,20 @@ const Login = () => {
         setUserDetail(value);
         ApiPostCall("http://localhost:8000/auth/login", value)
           .then((response) => {
+            history.push("/dashboard");
+            refreshPage();
+
             console.log(response);
             localStorage.setItem(
               "login",
               JSON.stringify({
                 auth: response.data.auth,
                 store: response.data.token,
+                userid: response.data.userid,
               })
             );
             storeCollectore();
-            history.push("/dashboard");
+
             setUserDetail((userdetail.auth = true));
             console.log("userdetail", userdetail);
           })

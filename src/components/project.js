@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../css/project.module.css";
-import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import ModalForm from "./modal";
-import { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import ProjectInfo from "./projectmodal";
+
+/**
+ * Component Displaying all the projects
+ */
 const Project = () => {
   const history = useHistory();
   const authentication = JSON.parse(localStorage.getItem("login"));
@@ -27,7 +28,6 @@ const Project = () => {
         });
     }
   }, []);
-  const showModal = () => {};
   return (
     <div>
       <div className={styles.project}>

@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../css/newsdetail.module.css";
 import { ImNewspaper } from "react-icons/im";
+
+/**
+ * Component to show the full news on click of a news item
+ */
 const NewsDetail = (props) => {
   return (
     <div className={styles.newsdisplay}>

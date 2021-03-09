@@ -1,11 +1,10 @@
 import React, { forwardRef, useImperativeHandle } from "react";
 import "antd/lib/modal/style/index.css";
-import axios from "axios";
-import TextInput from "./TextInput";
 import Modal from "react-modal";
-import styles from "../css/modal.module.scss";
-import { generateErrorToast, generateSuccessToast } from "../utils/toast/index";
 
+/**
+ * Component for a Modal Form (used in adding technology and news)
+ */
 const ModalForm = forwardRef((props, ref) => {
   const customStyles = {
     content: {

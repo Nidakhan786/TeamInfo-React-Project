@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../css/newsposts.module.css";
 import { ImNewspaper } from "react-icons/im";
 import NewsDisplay from "./newsdisplay";
@@ -8,7 +8,14 @@ const NewsPosts = ({ news, loading }) => {
     newsHeading: "",
     newsDescription: "",
   });
-
+  useEffect(() => {
+    if (news.length >= 0) {
+      setNews({
+        newsHeading: news.newsheading,
+        newsDescription: news.newsdescription,
+      });
+    }
+  }, []);
   // } else {
 
   // }

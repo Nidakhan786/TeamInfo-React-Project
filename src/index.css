@@ -27,6 +27,18 @@ body {
   border-radius: 10px;
   margin-bottom: 10px;
   width: 600px;
+  height: 35px;
+}
+.textarea {
+  height: 70px;
+  padding: 4px 5px;
+  font-size: 1rem;
+  border: 2px solid #edf2f7;
+  background-color: #f7fafc;
+  color: #2d3748;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 600px;
 }
 form {
   text-align: center;
@@ -47,6 +59,7 @@ button {
   text-decoration: none;
   appearance: none;
   display: inline-block;
+  margin-bottom: 10px;
 }
 .list {
   text-align: center;
@@ -242,4 +255,7 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #434343, #434343 1px, #111 0, #111);
+}
+body {
+  cursor: #262626;
 }

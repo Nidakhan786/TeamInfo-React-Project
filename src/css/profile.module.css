@@ -1,0 +1,30 @@
+.input {
+  padding: 4px 5px;
+  font-size: 1rem;
+  border: 2px solid #edf2f7;
+  background-color: #fdb3952b;
+  color: #2d3748;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 35px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  position: absolute;
+  top: 20%;
+  left: 26%;
+  width: 78vh;
+  padding: 19px;
+  /* margin: 10px; */
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+}
+.user {
+  font-size: 93px;
+  color: #fc794591;
+  margin: 13px;
+}
