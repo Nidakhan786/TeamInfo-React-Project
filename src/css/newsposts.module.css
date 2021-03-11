@@ -1,0 +1,33 @@
+.newsposts {
+  position: absolute;
+  top: 32%;
+  left: 5%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 35px;
+  width: 30%;
+  list-style-type: none;
+}
+.newsposts li {
+  border-bottom: solid 1px #000;
+  margin-bottom: 2px;
+  padding: 10px;
+}
+.newsposts li:hover {
+  box-shadow: 0 15px 20px rgb(75, 74, 72);
+  border-radius: 10px;
+}
+.newsposts h3 {
+  font-size: 17px;
+  padding: 0px;
+  margin: 0px;
+}
+.newsposts p {
+  font-size: 12px;
+}
+.imgicon {
+  font-size: 20px;
+}
+.newssections {
+  display: flex;
+}

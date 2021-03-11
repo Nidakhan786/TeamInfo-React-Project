@@ -1,0 +1,103 @@
+.newscontainer {
+  width: 100%;
+  margin-top: -378px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+}
+.newslist {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 120px;
+  text-align: left;
+  align-items: flex-end;
+  display: flex;
+}
+.heading {
+  font-size: 4.5em;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.newsbutton {
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+  background-color: #fff;
+  color: #262626;
+}
+.newsbuttonlink {
+  color: #262626;
+  font-weight: bold;
+  text-decoration: none;
+}
+.newsbutton:hover {
+  box-shadow: 0 15px 25px rgb(15, 13, 12);
+}
+.newsbuttonlink:hover {
+  color: #f9452e;
+}
+.newscontain {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  padding: 2px;
+  transform: translateX(-320px);
+  flex-wrap: wrap;
+  position: relative;
+}
+.newscontain .newcardcontainer {
+  position: relative;
+  width: 600px;
+  height: 70px;
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.5s;
+  border-radius: 9px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.newscontain:hover .newcardcontainer {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+.newscontain .newcardcontainer:hover {
+  transform: none;
+  opacity: 1;
+}
+.newscontain .newcardcontainer:hover {
+  box-shadow: 0 15px 25px rgba(226, 113, 6, 0.945);
+}
+.newscontain .newcardcontainer:focus {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.newscontain .newcardcontainer:focus {
+  box-shadow: 0 15px 25px rgba(226, 113, 6, 0.945);
+}
+.inputfield {
+  padding: 0.65rem 0.5rem;
+  font-size: 14px;
+  border: 2px solid #edf2f7;
+  background-color: #f7fafc;
+  color: #2d3748;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 450px;
+  text-align: center;
+}
+.modal {
+  height: 300px;
+  opacity: 1;
+}
+.modalcontainer .ant-modal-header {
+  border-radius: 26px 26px 0 0;
+}
