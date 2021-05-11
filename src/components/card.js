@@ -1,5 +1,6 @@
 import styles from "../css/card.module.css";
 import { FaUserCircle } from "react-icons/fa";
+import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import ModalForm from "./modal";
 import { useRef } from "react";

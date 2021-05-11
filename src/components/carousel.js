@@ -1,4 +1,5 @@
 import { Carousel } from "antd";
+import React from "react";
 import { useEffect, useState } from "react";
 import "antd/lib/carousel/style/index.css";
 import styles from "../css/carousel.module.css";

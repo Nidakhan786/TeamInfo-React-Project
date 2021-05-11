@@ -1,5 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 import SignupForm from "../../components/signupForm";
+import React from "react";
 import Dashboard from "../../components/dashboard";
 import Technology from "../../components/technology";
 import TeamMember from "../../components/teammember";
