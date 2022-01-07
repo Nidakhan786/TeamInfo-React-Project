@@ -9,7 +9,9 @@ import { useHistory } from "react-router-dom";
 const CardComp = (prop) => {
   const history = useHistory();
   let modalRef = useRef();
-  const showModal = () => {};
+  const showModal = () => {
+    modalRef.current.openModal();
+  };
   const cancelModal = () => {
     modalRef.current.onCancel();
   };
@@ -27,7 +29,7 @@ const CardComp = (prop) => {
           <div className={styles.content}>
             <p>{prop.role}</p>
             <button onClick={showModal}>View Profile</button>
-            <ModalForm ref={modalRef} heading="Profile View">
+            <ModalForm ref={modalRef} heading='Profile View'>
               <AiOutlineClose className={styles.close} onClick={cancelModal} />
               <div className={styles.teamprofcardcontainer}>
                 <h2>
